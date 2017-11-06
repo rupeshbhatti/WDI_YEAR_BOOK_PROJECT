@@ -1,0 +1,21 @@
+<section>
+  <form ng-submit="vm.submit(vm.student)">
+    <div>
+      <img class="student-image" src="{{ vm.student.image }}" alt="{{ vm.student.name }}">
+    </div>
+    <h1>Edit {{ vm.student.name }}</h1>
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" ng-model="vm.student.name">
+    </div>
+    <div>
+      <label for="image">Image</label>
+      <input type="text" id="image" ng-model="vm.student.image">
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary" ui-sref="studentsShow({ id: vm.student._id })">Cancel</button>
+      <button type="submit" class="btn btn-success">Confirm</button>
+      <!-- <input type="submit" value="Confirm"> -->
+    </div>
+  </form>
+</section>

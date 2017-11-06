@@ -1,0 +1,19 @@
+<section>
+  <div class="row">
+    <div class="col-sm-12">
+      <input type="text" class="search" ng-model="vm.q" placeholder="Search...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3 col-sm-4" ng-repeat="student in vm.students | orderBy:'name' | filter: { name: vm.q }">
+      <a ui-sref="studentsShow({ id: student._id })">
+        <div class="card">
+          <img class="student-image" src="{{ student.image }}" alt="{{ student.name }}">
+          <div class="card-body">
+            <h4 class="card-title">{{ student.name }}</h4>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

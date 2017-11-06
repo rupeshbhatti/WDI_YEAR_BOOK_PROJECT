@@ -1,0 +1,14 @@
+<section>
+  <div>
+    <div>
+      <img class="student-image" src="{{ vm.student.image }}" alt="{{ vm.student.name }}">
+    </div>
+    <div>
+      <h2>{{ vm.student.name }}</h2>
+    </div>
+    <div class="show-options">
+      <button type="button" class="btn btn-primary" ui-sref="studentsEdit({ id: vm.student._id })">Edit</button>
+      <button type="button" class="btn btn-danger" ng-click="vm.openModal()">Delete</button>
+    </div>
+  </div>
+</section>
